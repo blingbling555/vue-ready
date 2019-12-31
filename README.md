@@ -137,6 +137,18 @@ git clone git@github.com:PanJiaChen/vue-element-admin.git
 
 启动登录报错解决： https://ask.csdn.net/questions/1049118 
 
-# 
+在setting.js里面可以修改网页的title
+
+在main.js里面修改下生产环境不然登录报错
+
+config => config.devtool('cheap-source-map')   source-map   
+
+（ source-map 我们看到的源码，打包慢点，适合调试  cheap-source-map：对源码做了一些调整）
+
+
+
+
+
+
 
 链接： http://www.youbaobao.xyz/admin-docs/ 
