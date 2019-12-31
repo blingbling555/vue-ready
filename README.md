@@ -128,12 +128,15 @@ _events: {
 
 这里使用vue-element-admin
 
+vue-admin-template
+
 ```
 git clone git@github.com:PanJiaChen/vue-element-admin.git
+
 ```
 
+启动登录报错解决： https://ask.csdn.net/questions/1049118 
 
-
-# 参考链接：
+# 
 
 链接： http://www.youbaobao.xyz/admin-docs/ 
