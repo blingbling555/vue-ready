@@ -29,6 +29,7 @@ import Layout from '@/layout'
  */
 
 /**
+ * desc： 基础的都是可以访问的
  * constantRoutes
  * a base page that does not have permission requirements
  * all roles can be accessed
@@ -82,11 +83,33 @@ export const constantRoutes = [
 
 
 /**
+ * 用户权限：比如需要权限才可以访问的就写在这里面
  * asyncRoutes
  * the routes that need to be dynamically loaded based on user roles
  */
 export const asyncRoutes = [
-
+  {
+    path:"/book",
+    name:"book",
+    component:Layout,
+    redirect: '/book/create',
+    meta: {
+      title: '图书管理',
+      icon: 'documentation',
+      roles: ['admin']
+    },
+    children:[
+      {
+        path: '/book/create',
+        component: ()=>import('@/views/book/create'),
+        meta: {
+          title: '上传图书',
+          icon: 'edit',
+          roles: ['admin']
+        }
+      }
+    ]
+  },
   {
     path: '/error',
     component: Layout,

@@ -6,12 +6,15 @@ import 'nprogress/nprogress.css' // progress bar style
 import { getToken } from '@/utils/auth' // get token from cookie
 import getPageTitle from '@/utils/get-page-title'
 
+// 没加载成功右侧有小圆环
 NProgress.configure({ showSpinner: false }) // NProgress Configuration
 
+// 白名单的页面
 const whiteList = ['/login', '/auth-redirect'] // no redirect whitelist
 
 router.beforeEach(async(to, from, next) => {
   // start progress bar
+  debugger
   NProgress.start()
 
   // set page title
@@ -32,6 +35,7 @@ router.beforeEach(async(to, from, next) => {
         next()
       } else {
         try {
+          console.log("进来了")
           // get user info
           // note: roles must be a object array! such as: ['admin'] or ,['developer','editor']
           const { roles } = await store.dispatch('user/getInfo')

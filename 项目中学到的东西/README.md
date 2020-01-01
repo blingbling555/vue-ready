@@ -149,6 +149,29 @@ config => config.devtool('cheap-source-map')   source-map
 
 
 
+# 3、登录流程分析
+
+<img src="./img/login_process.58cab9a5.png" />
+
+### 3.1、分析登录流程
+
+##### 3.1.1、路由和权限检验
+
+<img src="./img/router_process.9acaa55e.png" />
+
+
+
+```
+main.js
+NProgress：这个好像加载的进度条
+```
+
+
+
+
+
+
+
 
 
 链接： http://www.youbaobao.xyz/admin-docs/ 
