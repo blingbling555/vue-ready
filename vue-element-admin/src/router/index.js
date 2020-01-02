@@ -96,7 +96,7 @@ export const asyncRoutes = [
     meta: {
       title: '图书管理',
       icon: 'documentation',
-      roles: ['admin']
+      roles: ['admin','editor']
     },
     children:[
       {
@@ -105,9 +105,18 @@ export const asyncRoutes = [
         meta: {
           title: '上传图书',
           icon: 'edit',
-          roles: ['admin']
+          roles: ['admin','editor']
         }
-      }
+      },
+      {
+        path: '/book/list',
+        component: ()=>import('@/views/book/list'),
+        meta: {
+          title: '图书列表',
+          icon: 'edit',
+          roles: ['other']
+        }
+      },
     ]
   },
   {
